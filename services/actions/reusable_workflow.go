@@ -404,6 +404,7 @@ func insertCallerChildren(ctx context.Context, run *actions_model.ActionRun, att
 			AttemptJobID:            attemptJobID,
 			Needs:                   needs,
 			RunsOn:                  parsedChild.RunsOn(),
+			RunsOnGroup:             parsedChild.RunsOnGroup(),
 			ContinueOnError:         parsedChild.GetContinueOnError(),
 			MaxParallel:             parseMaxParallel(jobID, parsedChild.Strategy.MaxParallelString),
 			Status:                  actions_model.StatusBlocked,
